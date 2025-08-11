@@ -1,18 +1,45 @@
-<div class="position-fixed top-50 star-50 translate-middle 
-text-bg-secundary rounded-5 p-5" style ="width: 70%">
-<h1 class="text-center mb-3"> Calculadora 2 ヾ(≧▽≦*)</h1>
+<div class="position-fixed top-50 start-50 translate-middle 
+text-bg-secondary rounded-5 p-5" style="width: 70%;">
+<h1 class="text-center mb-4"> Calculadora 2 ヾ(≧▽≦*)</h1>
+
 <form>
     <div class="row mb-3">
-        <div class="col-sm-10 text-center">
+        
+        <div class="col-sm-20 text-center">
             <label for="inputNumber1" class="form-label">Insira o primeiro número aqui: </label>
             <input type="number" class= "form-control" [(ngModel)]="num1" name="num1">
         </div>
     </div>
-        <div class="col-sm-7 text-center">
+        <div class="col-sm-20 text-center">
             <label for="inputNumber1" class="form-label">Insira o segundo número aqui: </label>
             <input type="number" class= "form-control" [(ngModel)]="num2" name="num2">
         </div>
 
+      
+            <div class="col-20 d-grid gap-4">
+                <button class="btn btn-primary " (click)="sum()">+</button>
+            </div>
+        
+            <div class="col-20 d-grid gap-4">
+                <button class="btn btn-primary" (click)="sub()">-</button>
+            </div>
+                        <div class="col-20 d-grid gap-4">
+                <button class="btn btn-primary" (click)="mult()">x</button>
+            </div>
+                        <div class="col-20 d-grid gap-4">
+                <button class="btn btn-primary" (click)="div()">÷</button>
+            </div>
+                        <div class="col-20 d-grid gap-4 text-center">
+                <button class="btn btn-primary" (click)="por()">%</button>
+            </div>
+
+            <div class="text-center">
+                <label for="inputNumber1" class="form-label">Resultado</label>
+                <div class="alert alert-primary" role=" alert">{{result}}</div> 
+            </div>
+        
+            
+    
 
 </form>
 </div>
